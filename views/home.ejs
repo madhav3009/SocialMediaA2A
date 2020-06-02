@@ -1,0 +1,74 @@
+<link rel="stylesheet" href="/css/home.css">
+
+<div id="home-container">
+  
+    <section id="feed-posts">
+       
+        
+        <% if(locals.user){ %>
+            <h4>Wanna Post something . Don't think!! Just Post...</h4>
+        
+        <form action="/posts/create" id="new-post-form" method="POST">
+            <textarea name="content" cols="130" rows="5" placeholder="Type Here..." required></textarea>
+            <input id="post-btn" type="submit" value="Post">
+        </form>
+        
+
+        <h1></h1>
+        
+            <div id="posts-list-container">
+                <ul>
+                    <% for(post of posts){ %>
+                        
+                    <%- include('_post') -%>
+
+                    <%} %>
+                </ul>
+            </div>
+        </section>
+        
+        
+        <section id="users">
+            <h4>Users List</h4>
+            <% if (locals.user) { %>
+            <% for(u of all_users){%>
+                <li>
+                        <div>
+                        <img src="https://st2.depositphotos.com/1007566/12304/v/950/depositphotos_123041468-stock-illustration-avatar-man-cartoon.jpg" alt="<%= user.name %>" width="100">
+                        <a href="/users/profile/<%= u.id %>"><%= u.name %></a>
+                        <div>
+
+                </li>
+            <% } %>
+
+            <%}%>
+
+        </section>
+
+        <%}else{%>    
+
+            <div class="container">
+                <div class="centered"><h1>Welcome to Social Media A2A</h1></div>
+           
+                <img src="https://www.digitalartsonline.co.uk/cmsdata/slideshow/3641753/88f3c836761353_5731f5aadae8c.png" width="90%" />
+            </div>  
+  
+
+        <%} %>
+
+       
+</div>
+
+<!-- importing this script for creating the comments -->
+<script src="/js/home_post_comments.js" ></script>
+<script src="/js/home_posts.js"></script>
+
+<!-- import the script file for toggle likes, also run it over for the already present posts and comments on the page -->
+<script src="js/toggle_likes.js"></script>
+<script>
+    $('.toggle-like-button').each(function(){
+        let self = this;
+        let toggleLike = new ToggleLike(self);
+    });
+</script>
+

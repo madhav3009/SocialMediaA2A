@@ -1,0 +1,22 @@
+#top {
+  width: 50px;
+  height: 40px;
+  transform: translateX(-120%);
+  border-radius: 5px;
+  background: linear-gradient(to right, #260cbb, #0262e0);
+  margin: 5%;
+  position: sticky;
+  color: white;
+  font-size: 2rem;
+  position: sticky;
+  bottom: 20px;
+  box-shadow: 10px 14px 28px rgba(0, 0, 0, 0.541), 0 10px 10px rgba(0, 0, 0, 0.493); }
+  #top .fa {
+    padding-top: 2%; }
+  #top .fa-arrow-up:before {
+    font-size: 1rem;
+    color: white;
+    padding: 10px;
+    margin-top: 2%;
+    text-align: center !important;
+    font-size: 2rem !important; }

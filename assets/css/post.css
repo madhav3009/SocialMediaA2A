@@ -1,0 +1,41 @@
+@import url("https://fonts.googleapis.com/css?family=Ubuntu");
+.onlypost {
+  padding: 20px;
+  font-size: 1rem;
+  list-style-type: none;
+  margin-top: 5%; }
+  .onlypost #username {
+    font: size 1.2rem;
+    font-weight: bold;
+    color: #FD3984;
+    float: left; }
+  .onlypost #content {
+    font-size: 0.8rem;
+    transform: translateY(-50%); }
+  .onlypost img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%; }
+  .onlypost a {
+    font-size: 1rem;
+    color: #0099ff; }
+
+.delete-post-button {
+  float: right;
+  color: black;
+  font-weight: bold;
+  font-size: 1.5rem; }
+
+.newpost {
+  color: #180d0f;
+  background-color: #f0f0e7;
+  padding: 10px;
+  margin-bottom: 2%; }
+
+#postavatar {
+  float: left;
+  width: 200px; }
+
+.fa-thumbs-up:before {
+  font-size: 1rem !important;
+  color: #16ade9; }
