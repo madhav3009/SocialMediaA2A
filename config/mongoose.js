@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 
 mongoose.connect('mongodb://localhost/socialA2A_development');
-
 const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, "Error connecting to MongoDB"));

@@ -73,3 +73,9 @@
     font-size: 1rem;
     outline: 0px;
     margin-left: 5%; }
+    
+    .containerimg{
+      text-align: center;
+      margin-top:-12%;
+      z-index:-5;
+    }
